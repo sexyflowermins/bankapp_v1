@@ -2,14 +2,14 @@ server:
   port: 8080
   servlet:
     encoding:
-      charset: UTF-8
+      charset: utf-8
       force: true
       
 
 spring:
   mvc:
     view:
-      prefix: /WEB_INF/view/
+      prefix: /WEB-INF/view/
       suffix: .jsp
   datasource:
     url: jdbc:h2:mem:testdb;MODE=MySQL
@@ -29,3 +29,11 @@ spring:
   output:
     ansi: 
       enabled: always
+      
+      
+mybatis:
+  mapper-locations:
+  - classpath:mapper/**.xml    
+  configuration:
+    map-underscore-to-camel-case: true
+        

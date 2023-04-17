@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 import lombok.Data;
 
 @Data
-public class Histroy {
+public class History {
 	
 	private Integer id;
 	private Long amount;
