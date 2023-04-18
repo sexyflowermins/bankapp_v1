@@ -28,11 +28,8 @@ public class AccountController {
 	 */
 	@GetMapping({ "/list", "/" })
 	public String list() {
-		
-		// todo 예외 테스트 - 삭제예정
-		//throw new CustomRestfullException("인증되지 않은 사용자 입니다", HttpStatus.UNAUTHORIZED);
-		throw new CustomPageException("페이지를 찾을수 없습니다", HttpStatus.NOT_FOUND);
-		//return "/account/list";
+	
+		return "/account/list";
 	}
 
 	// 출금 페이지

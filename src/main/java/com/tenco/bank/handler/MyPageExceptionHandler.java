@@ -21,7 +21,7 @@ public class MyPageExceptionHandler {
 	@ExceptionHandler(CustomPageException.class)
 	public ModelAndView handleRuntimePageException(CustomPageException e) {
 		// ModelAndView 활용 방법
-		ModelAndView modelAndView = new ModelAndView("error");
+		ModelAndView modelAndView = new ModelAndView("errorPage");
 		modelAndView.addObject("statusCode",HttpStatus.NOT_FOUND.value());
 		modelAndView.addObject("message",e.getMessage());
 		return modelAndView;
